@@ -1,0 +1,10 @@
+.menu_button {
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    font-size: 25px;
+    width: 40%;
+    height: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/SaveMenu/SaveMenu.uss?fileID=7433441132597879392&amp;guid=3c28f2de7edee8646ad9059cde91217e&amp;type=3#SaveMenu" />
+    <ui:VisualElement style="flex-grow: 1; justify-content: center;">
+        <ui:Button text="SAVE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SaveButton" class="menu_button" />
+        <ui:Button text="играть продолжение" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ContinueButton" class="menu_button" />
+    </ui:VisualElement>
+</ui:UXML>

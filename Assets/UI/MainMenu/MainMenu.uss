@@ -1,0 +1,11 @@
+.main_menu_button {
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 40%;
+    height: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    -unity-font: url("project://database/Assets/UI/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=ab6427c5770ee1644904328e32cd624e&type=3#NotInter-Regular");
+}

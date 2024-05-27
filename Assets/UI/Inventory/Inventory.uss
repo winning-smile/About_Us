@@ -1,0 +1,28 @@
+.inv_canvas {
+    align-self: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 80%;
+    height: 80%;
+    max-height: 80%;
+    min-height: 80%;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: rgba(0, 0, 0, 0.34);
+    flex-direction: row;
+    padding-top: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+}
+
+.cell {
+    width: 10%;
+    height: 15%;
+    background-color: rgba(255, 0, 0, 0.67);
+    max-height: 15%;
+    max-width: 10%;
+    align-self: auto;
+    align-items: stretch;
+    margin-right: 5%;
+}

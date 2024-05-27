@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss?fileID=7433441132597879392&amp;guid=503f34039ec957a49a08e8e50f2daa7d&amp;type=3#MainMenu" />
+    <ui:VisualElement style="flex-grow: 1; justify-content: center;">
+        <ui:Button text="Continue" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ContinueButton" class="main_menu_button" />
+        <ui:Button text="New Game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NewGameButton" class="main_menu_button" />
+        <ui:Button text="Load Game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LoadGameButton" class="main_menu_button" />
+        <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SettingsButton" class="main_menu_button" />
+        <ui:Button text="Exit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ExitButton" class="main_menu_button" />
+    </ui:VisualElement>
+</ui:UXML>
