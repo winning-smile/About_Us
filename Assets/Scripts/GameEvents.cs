@@ -7,8 +7,8 @@ public class GameEvents
     public static UnityEvent<GameObject> OnCameraChange = new UnityEvent<GameObject>();
     public static UnityEvent OnActiveGameEvent = new UnityEvent();
     public static UnityEvent OnPassiveGameEvent = new UnityEvent();
-    public static UnityEvent Paused = new UnityEvent();
-    public static UnityEvent Unpaused = new UnityEvent();
+    public static UnityEvent<ScriptableObject> OnItemPick = new UnityEvent<ScriptableObject>();
+    public static UnityEvent<Transform> OnDoorInteraction = new UnityEvent<Transform>();
 
     public static UnityEvent<int> OnUIOpen = new UnityEvent<int>();
     public static UnityEvent<int> OnUIClose= new UnityEvent<int>();
@@ -24,6 +24,10 @@ public class GameEvents
             OnUIClose.Invoke(mode);;
         }
     }
+
+    public static void TeleportToPoint(Transform teleportPoint) {
+        OnDoorInteraction.Invoke(teleportPoint);
+    }
     
     public static void ChangeCamera(GameObject cam) {
         Debug.Log("Camera is changed");
@@ -36,5 +40,9 @@ public class GameEvents
     
     public static void SetActiveState() {
         OnPassiveGameEvent.Invoke();
+    }
+
+    public static void PickItem(ScriptableObject item) {
+        OnItemPick.Invoke(item);
     }
 }

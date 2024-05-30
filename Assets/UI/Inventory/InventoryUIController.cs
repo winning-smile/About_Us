@@ -4,9 +4,6 @@ public class InventoryUIController : MonoBehaviour
 {
     public InventoryUI _InventoryUI;
 
-    private void OnValidate() {
-        if (!_InventoryUI) {
-            _InventoryUI = GetComponentInChildren<InventoryUI>();
-        }
-    }
+    [SerializeField]
+    private InventoryController _inventoryController;
 }

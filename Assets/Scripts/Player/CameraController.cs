@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class CameraController : MonoBehaviour {
     private const float CAMERA_SENS = 100.0f;
