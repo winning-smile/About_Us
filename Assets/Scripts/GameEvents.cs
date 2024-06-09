@@ -5,8 +5,6 @@ public class GameEvents
 {
     // коды Paused: 1 - пауза через esc; 2 - вход в SaveMenu
     public static UnityEvent<GameObject> OnCameraChange = new UnityEvent<GameObject>();
-    public static UnityEvent OnActiveGameEvent = new UnityEvent();
-    public static UnityEvent OnPassiveGameEvent = new UnityEvent();
     public static UnityEvent<ScriptableObject> OnItemPick = new UnityEvent<ScriptableObject>();
     public static UnityEvent<Transform> OnDoorInteraction = new UnityEvent<Transform>();
 
@@ -21,7 +19,7 @@ public class GameEvents
         if (_isPaused) {
             OnUIOpen.Invoke(mode);
         } else {
-            OnUIClose.Invoke(mode);;
+            OnUIClose.Invoke(mode);
         }
     }
 
@@ -32,14 +30,6 @@ public class GameEvents
     public static void ChangeCamera(GameObject cam) {
         Debug.Log("Camera is changed");
         OnCameraChange.Invoke(cam);
-    }
-    
-    public static void SetPassiveState() {
-        OnActiveGameEvent.Invoke();
-    }
-    
-    public static void SetActiveState() {
-        OnPassiveGameEvent.Invoke();
     }
 
     public static void PickItem(ScriptableObject item) {

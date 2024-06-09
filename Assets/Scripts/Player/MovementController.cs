@@ -1,3 +1,4 @@
+using Objects;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -29,7 +30,7 @@ public class MovementController : MonoBehaviour {
             var ray = _currentCam.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray, out RaycastHit hit)) {
-                if (!hit.collider.GetComponent<IInteractable>()) {
+                if (!hit.collider.GetComponent<Interactable>()) {
                     _agent.SetDestination(hit.point);
                 }
             }

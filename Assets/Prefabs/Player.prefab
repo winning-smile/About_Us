@@ -787,7 +787,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 691
+  m_VersionIndex: 694
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -970,6 +970,8 @@ GameObject:
   - component: {fileID: 1003669884055699857}
   - component: {fileID: 7650103367277026821}
   - component: {fileID: 8432280583592515089}
+  - component: {fileID: 829824907179371747}
+  - component: {fileID: 8945161504002835278}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -1083,6 +1085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 0}
+  _worldState: {fileID: 0}
 --- !u!114 &64192650998646668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1096,6 +1099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _agent: {fileID: 7650103367277026821}
+  _playerTransform: {fileID: 2190229076801169712}
 --- !u!114 &1003669884055699857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1143,3 +1147,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 7230614327987176980}
+--- !u!114 &829824907179371747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7230614327987176980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6106339b6dc84824d9cf0ba7fcdca505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8945161504002835278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7230614327987176980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b29787ef3edf0843a5106b535c51334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

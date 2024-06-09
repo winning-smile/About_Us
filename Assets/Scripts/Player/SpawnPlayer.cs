@@ -7,7 +7,7 @@ public class SpawnPlayer : MonoBehaviour {
     [SerializeField]
     private WorldState _worldState;
 
-    private void Awake() {
+    private void Start() {
         if (_worldState.PlayerPos) {
             transform.position = _worldState.PlayerPos.position;
         } else {

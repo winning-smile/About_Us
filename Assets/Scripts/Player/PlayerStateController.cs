@@ -7,16 +7,15 @@ public class PlayerStateController : MonoBehaviour {
     private MovementController _playerMovementController;
     private void Start() {
         _playerMovementController = _player.GetComponent<MovementController>();
-        GameEvents.OnActiveGameEvent.AddListener(SetStaticState);
-        GameEvents.OnPassiveGameEvent.AddListener(SetActiveState);
+        GameEvents.OnUIOpen.AddListener(SetStaticState);
+        GameEvents.OnUIClose.AddListener(SetActiveState);
     }
 
-    private void SetStaticState() {
+    private void SetStaticState(int mode) {
         _playerMovementController.enabled = false;
-        //_player.gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
     }
 
-    private void SetActiveState() {
+    private void SetActiveState(int mode) {
         _playerMovementController.enabled = true;
         
     }
