@@ -1,23 +1,17 @@
-using UnityEngine;
-
 public class InventoryCell {
-    private ScriptableObject _slotItem;
+    private Item _slotItem;
     private bool _isEmpty;
 
-    public InventoryCell(bool isEmpty = true, ScriptableObject slotItem = null) {
+    public InventoryCell(bool isEmpty = true, Item slotItem = null) {
         _slotItem = slotItem;
         _isEmpty = isEmpty;
-    }
-
-    public ScriptableObject GetItem() {
-        return _slotItem;
     }
 
     public bool IsEmpty() {
         return _isEmpty;
     }
 
-    public void StoreItem(ScriptableObject item) {
+    public void StoreItem(Item item) {
         _slotItem = item;
     }
 }

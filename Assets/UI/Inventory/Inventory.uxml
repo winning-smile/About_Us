@@ -1,14 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Inventory/Inventory.uss?fileID=7433441132597879392&amp;guid=d488fe5a92dab74408c1b6bd11818ae1&amp;type=3#Inventory" />
-    <ui:VisualElement name="Canvas" style="flex-grow: 1;">
-        <ui:VisualElement name="inventory_canvas" class="inv_canvas" style="flex-grow: 1;">
-            <ui:VisualElement name="cell" class="cell" style="flex-grow: 1;" />
-            <ui:VisualElement name="cell" class="cell" style="flex-grow: 1;" />
-            <ui:VisualElement name="cell" class="cell" style="flex-grow: 1;" />
-            <ui:VisualElement name="cell" class="cell" style="flex-grow: 1;" />
-            <ui:VisualElement name="cell" class="cell" style="flex-grow: 1;" />
-            <ui:VisualElement name="cell" class="cell" style="flex-grow: 1;" />
-            <ui:VisualElement name="cell" class="cell" style="flex-grow: 1;" />
-        </ui:VisualElement>
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(75, 70, 70, 0.81);">
+        <ui:ListView name="inventoryView" style="height: 500px;" />
     </ui:VisualElement>
 </ui:UXML>

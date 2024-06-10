@@ -5,7 +5,8 @@ public class GameEvents
 {
     // коды Paused: 1 - пауза через esc; 2 - вход в SaveMenu
     public static UnityEvent<GameObject> OnCameraChange = new UnityEvent<GameObject>();
-    public static UnityEvent<ScriptableObject> OnItemPick = new UnityEvent<ScriptableObject>();
+    public static UnityEvent<Item> OnItemPick = new UnityEvent<Item>();
+    public static UnityEvent<Item> OnItemPicked = new UnityEvent<Item>();
     public static UnityEvent<Transform> OnDoorInteraction = new UnityEvent<Transform>();
 
     public static UnityEvent<int> OnUIOpen = new UnityEvent<int>();
@@ -28,11 +29,14 @@ public class GameEvents
     }
     
     public static void ChangeCamera(GameObject cam) {
-        Debug.Log("Camera is changed");
         OnCameraChange.Invoke(cam);
     }
 
-    public static void PickItem(ScriptableObject item) {
+    public static void PickItem(Item item) {
         OnItemPick.Invoke(item);
+    }
+    
+    public static void AddItemToInventoryUI(Item item) {
+        OnItemPicked.Invoke(item);
     }
 }

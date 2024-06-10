@@ -6,4 +6,12 @@ public class InventoryUIController : MonoBehaviour
 
     [SerializeField]
     private InventoryController _inventoryController;
+
+    private void Start() {
+        GameEvents.OnItemPicked.AddListener(AddItemToInventoryUI);
+    }
+
+    private void AddItemToInventoryUI(Item item) {
+        _InventoryUI.AddItemSprite(item);
+    }
 }
