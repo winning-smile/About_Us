@@ -1,4 +1,4 @@
-public enum GameState {
+public enum PauseState {
     PauseMenu,
     SaveMenu,
     InventoryMenu

@@ -1,10 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Inventory;
-using UI;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 
 public class InventoryUI : UIElement {
@@ -12,7 +9,7 @@ public class InventoryUI : UIElement {
     private ItemInspectionController _itemInspectionController;
     public VisualTreeAsset itemsListTemplate;
     private ListView _itemsListView;
-    private DraggableVisualElement _itemInspectionView;
+    private VisualElement _itemInspectionView;
     private List<Item> _itemList;
     private bool _isDragging;
     private bool _isItemFocus;
@@ -20,12 +17,13 @@ public class InventoryUI : UIElement {
     private void OnEnable() {
         _root.style.display = DisplayStyle.None;
         _itemsListView = _root.Q<ListView>("inventoryView");
-        _itemInspectionView = _root.Q<DraggableVisualElement>("ItemInspectionWindow");
+        _itemInspectionView = _root.Q<VisualElement>("ItemInspectionWindow");
         _itemList = new List<Item>();
         
         _itemInspectionView.RegisterCallback<PointerDownEvent>(DragBegin);
         _itemInspectionView.RegisterCallback<PointerUpEvent>(DragEnd);
         _itemInspectionView.RegisterCallback<PointerMoveEvent>(DragMove);
+        _itemInspectionView.RegisterCallback<WheelEvent>(ZoomItem);
     }
 
     private void OnDrawUI() {
@@ -44,6 +42,12 @@ public class InventoryUI : UIElement {
     private void DragMove(PointerMoveEvent evt) {
         if (_isDragging && _isItemFocus) {
             _itemInspectionController.RotateInspectionItem(evt);
+        }
+    }
+
+    private void ZoomItem(WheelEvent evt) {
+        if (_isItemFocus) {
+            _itemInspectionController.ZoomInspectionItem(evt);
         }
     }
 

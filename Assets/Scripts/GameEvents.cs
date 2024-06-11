@@ -8,12 +8,12 @@ public class GameEvents
     public static UnityEvent<Item> OnItemPicked = new UnityEvent<Item>();
     public static UnityEvent<Transform> OnDoorInteraction = new UnityEvent<Transform>();
 
-    public static UnityEvent<GameState> OnUIOpen = new UnityEvent<GameState>();
-    public static UnityEvent<GameState> OnUIClose= new UnityEvent<GameState>();
+    public static UnityEvent<PauseState> OnUIOpen = new UnityEvent<PauseState>();
+    public static UnityEvent<PauseState> OnUIClose= new UnityEvent<PauseState>();
     
     private static bool _isPaused;
     
-    public static void SwitchPause(GameState state) {
+    public static void SwitchPause(PauseState state) {
         _isPaused = !_isPaused;
 
         if (_isPaused) {

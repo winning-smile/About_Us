@@ -11,11 +11,11 @@ public class PlayerStateController : MonoBehaviour {
         GameEvents.OnUIClose.AddListener(SetActiveState);
     }
 
-    private void SetStaticState(GameState state) {
+    private void SetStaticState(PauseState state) {
         _playerMovementController.enabled = false;
     }
 
-    private void SetActiveState(GameState state) {
+    private void SetActiveState(PauseState state) {
         _playerMovementController.enabled = true;
         
     }

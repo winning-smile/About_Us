@@ -23,12 +23,12 @@ namespace Objects {
                 _canFocusObject = false;
                 _prevCamera.SetActive(false);
                 _areaCamera.SetActive(true);
-                GameEvents.SwitchPause(GameState.SaveMenu);
+                GameEvents.SwitchPause(PauseState.SaveMenu);
             }
         }
 
-        private void ReturnPrevCam(GameState state) {
-            if (state == GameState.SaveMenu) {
+        private void ReturnPrevCam(PauseState state) {
+            if (state == PauseState.SaveMenu) {
                 _canFocusObject = true;
                 _prevCamera.SetActive(true);
                 _areaCamera.SetActive(false); 

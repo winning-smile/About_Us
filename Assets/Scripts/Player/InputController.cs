@@ -8,19 +8,19 @@ public class InputController : MonoBehaviour {
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
-            GameEvents.SwitchPause(GameState.PauseMenu);
+            GameEvents.SwitchPause(PauseState.PauseMenu);
         }
 
         if (Input.GetKeyDown(KeyCode.Tab)) {
-            GameEvents.SwitchPause(GameState.InventoryMenu);
+            GameEvents.SwitchPause(PauseState.InventoryMenu);
         }
     }
 
-    private void SetPause(GameState state) {
+    private void SetPause(PauseState state) {
         Time.timeScale = 0;
     }
 
-    private void UnsetPause(GameState state) {
+    private void UnsetPause(PauseState state) {
         Time.timeScale = 1;
     }
 }

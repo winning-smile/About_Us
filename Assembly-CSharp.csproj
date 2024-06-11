@@ -49,10 +49,10 @@
     <Compile Include="Assets\Scripts\Objects\Item.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryCell.cs" />
     <Compile Include="Assets\Scripts\Player\SpawnPlayer.cs" />
-    <Compile Include="Assets\UI\DraggableVisualElement.cs" />
     <Compile Include="Assets\UI\Inventory\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryController.cs" />
     <Compile Include="Assets\Scripts\Inventory\ItemInspectionController.cs" />
+    <Compile Include="Assets\Scripts\PauseState.cs" />
     <Compile Include="Assets\Content\Epic Toon FX\Epic Toon FX\Demo\Scripts\VFX Library\ParticleEffectsLibrary.cs" />
     <Compile Include="Assets\Content\Packages\PSX_Shader\Scripts\Pixelation\PixelationRenderFeature.cs" />
     <Compile Include="Assets\Content\Epic Toon FX\Epic Toon FX\Scripts\ETFXRotation.cs" />
@@ -104,7 +104,6 @@
     <Compile Include="Assets\Scripts\Objects\Interactable.cs" />
     <Compile Include="Assets\Content\Packages\PSX_Shader\Scripts\Fog\Fog.cs" />
     <Compile Include="Assets\UI\MainMenu\menuUIController.cs" />
-    <Compile Include="Assets\Scripts\GameState.cs" />
     <Compile Include="Assets\Scripts\Objects\InteractableConstruction.cs" />
     <Compile Include="Assets\Content\Packages\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStateController.cs" />
