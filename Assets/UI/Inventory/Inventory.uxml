@@ -2,6 +2,6 @@
     <Style src="project://database/Assets/UI/Inventory/Inventory.uss?fileID=7433441132597879392&amp;guid=d488fe5a92dab74408c1b6bd11818ae1&amp;type=3#Inventory" />
     <ui:VisualElement style="flex-grow: 1; background-color: rgba(75, 70, 70, 0.81); flex-direction: row; align-items: center; flex-basis: 0; flex-wrap: nowrap; justify-content: center;">
         <ui:ListView name="inventoryView" style="height: 80%; width: 40%; max-width: 40%; max-height: 80%; margin-right: 10%;" />
-        <ui:VisualElement name="ItemInspectionView" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Textures/ItemInspectionTexture.renderTexture?fileID=8400000&amp;guid=b7aca578519c3b4449f8d4745be38c06&amp;type=2#ItemInspectionTexture&quot;); height: 512px; width: 512px; max-width: 512px; max-height: 512px;" />
+        <UI.DraggableVisualElement name="ItemInspectionWindow" style="width: 512px; height: 512px; max-width: 512px; max-height: 512px; background-image: url(&quot;project://database/Assets/Textures/ItemInspectionTexture.renderTexture?fileID=8400000&amp;guid=b7aca578519c3b4449f8d4745be38c06&amp;type=2#ItemInspectionTexture&quot;);" />
     </ui:VisualElement>
 </ui:UXML>

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 namespace Objects {
-    public class SaveStation : Interactable, IInteractableConstruction
+    public class SaveStation : InteractableConstruction
     {
         private GameObject _areaCamera;
         private GameObject _prevCamera;
@@ -14,11 +14,11 @@ namespace Objects {
             GameEvents.OnUIClose.AddListener(ReturnPrevCam);
         }
 
-        private void GetCurrentCam(GameObject cam) {
+        protected override void GetCurrentCam(GameObject cam) {
             _prevCamera = cam;
         }
 
-        private void OnMouseDown() {
+        protected override void OnMouseDown() {
             if (_canFocusObject) {
                 _canFocusObject = false;
                 _prevCamera.SetActive(false);
