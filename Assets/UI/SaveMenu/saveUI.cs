@@ -25,7 +25,7 @@ public class SaveUI : UIElement {
     }
 
     private void OnContinueButtonClicked(ClickEvent evt) {
-        GameEvents.SwitchPause(1);
+        GameEvents.SwitchPause(GameState.SaveMenu);
     }
 
     private void OnSaveButtonClicked(ClickEvent evt) {

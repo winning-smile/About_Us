@@ -3,24 +3,23 @@ using UnityEngine.Events;
 
 public class GameEvents
 {
-    // коды Paused: 1 - пауза через esc; 2 - вход в SaveMenu
     public static UnityEvent<GameObject> OnCameraChange = new UnityEvent<GameObject>();
     public static UnityEvent<Item> OnItemPick = new UnityEvent<Item>();
     public static UnityEvent<Item> OnItemPicked = new UnityEvent<Item>();
     public static UnityEvent<Transform> OnDoorInteraction = new UnityEvent<Transform>();
 
-    public static UnityEvent<int> OnUIOpen = new UnityEvent<int>();
-    public static UnityEvent<int> OnUIClose= new UnityEvent<int>();
+    public static UnityEvent<GameState> OnUIOpen = new UnityEvent<GameState>();
+    public static UnityEvent<GameState> OnUIClose= new UnityEvent<GameState>();
     
     private static bool _isPaused;
     
-    public static void SwitchPause(int mode) {
+    public static void SwitchPause(GameState state) {
         _isPaused = !_isPaused;
 
         if (_isPaused) {
-            OnUIOpen.Invoke(mode);
+            OnUIOpen.Invoke(state);
         } else {
-            OnUIClose.Invoke(mode);
+            OnUIClose.Invoke(state);
         }
     }
 

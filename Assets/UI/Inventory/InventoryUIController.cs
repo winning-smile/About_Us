@@ -12,6 +12,6 @@ public class InventoryUIController : MonoBehaviour
     }
 
     private void AddItemToInventoryUI(Item item) {
-        _InventoryUI.AddItemSprite(item);
+        _InventoryUI.AddItemToInventoryUI(item);
     }
 }

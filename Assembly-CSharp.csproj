@@ -103,6 +103,7 @@
     <Compile Include="Assets\Scripts\Objects\Interactable.cs" />
     <Compile Include="Assets\Content\Packages\PSX_Shader\Scripts\Fog\Fog.cs" />
     <Compile Include="Assets\UI\MainMenu\menuUIController.cs" />
+    <Compile Include="Assets\Scripts\GameState.cs" />
     <Compile Include="Assets\Content\Packages\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStateController.cs" />
     <Compile Include="Assets\UI\SaveMenu\saveUIController.cs" />

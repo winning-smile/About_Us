@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestItem
   m_EditorClassIdentifier: 
   ItemId: 1
-  ItemName: Hello World!
+  ItemName: Test Item 1
   ItemInfo: Tilted Test
   ItemSprite: {fileID: 21300000, guid: 1f0887b1c7aa06442b3dde5a7f426442, type: 3}
   prefab: {fileID: 3677019218168854183, guid: e399f21428707424680518bbfc5b0c98, type: 3}

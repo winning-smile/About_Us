@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -14,7 +15,7 @@ public class InventoryUI : UIElement
         _itemList = new List<Item>();
     }
 
-    public void AddItemSprite(Item item) {
+    public void AddItemToInventoryUI(Item item) {
         _itemList.Add(item);
         
         _itemsListView.makeItem = () =>
@@ -28,7 +29,19 @@ public class InventoryUI : UIElement
         };
         _itemsListView.itemsSource = _itemList;
         _itemsListView.selectionType = SelectionType.Single;
+        _itemsListView.selectionChanged += FocusItem;
+        _itemsListView.ClearSelection();
         _itemsListView.Rebuild();
-        
+    }
+
+    public void ClearSelectionOnClose() {
+        _itemsListView.ClearSelection();
+    }
+    
+    private void FocusItem(IEnumerable<object> obj) {
+        if (obj.Any()) {
+            var item = obj.First() as Item;
+            Debug.Log($"{item.ItemName}"); 
+        }
     }
 }

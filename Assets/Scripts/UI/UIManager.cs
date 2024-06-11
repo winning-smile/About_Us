@@ -1,18 +1,16 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UIElements;
 
 public class UIManager : MonoBehaviour {
     [SerializeField]
     private GameObject[] _uiElements;
-    private Dictionary<int, GameObject> _uiDictionary = new();
+    private Dictionary<GameState, GameObject> _uiDictionary = new();
 
     private void Awake() {
         var i = 0;
         foreach (var uiDoc in _uiElements) {
-            _uiDictionary.Add(i, uiDoc);
+            _uiDictionary.Add((GameState)i, uiDoc);
             i++;
         }
     }
@@ -22,12 +20,15 @@ public class UIManager : MonoBehaviour {
         GameEvents.OnUIClose.AddListener(CloseUI);
     }
 
-    private void ShowUI(int mode) {
-        _uiDictionary[mode].GetComponent<UIDocument>().rootVisualElement.style.display = DisplayStyle.Flex;
+    private void ShowUI(GameState state) {
+        _uiDictionary[state].GetComponent<UIDocument>().rootVisualElement.style.display = DisplayStyle.Flex;
     }
 
-    private void CloseUI(int mode) {
-        _uiDictionary[mode].GetComponent<UIDocument>().rootVisualElement.style.display = DisplayStyle.None;
+    private void CloseUI(GameState state) {
+        _uiDictionary[state].GetComponent<UIDocument>().rootVisualElement.style.display = DisplayStyle.None;
+        if (state == GameState.InventoryMenu) {
+            _uiDictionary[state].GetComponent<InventoryUI>().ClearSelectionOnClose();
+        }
     }
     
     

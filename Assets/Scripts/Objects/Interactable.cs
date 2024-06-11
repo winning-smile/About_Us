@@ -20,7 +20,7 @@ namespace Objects {
             GameEvents.OnUIClose.AddListener(ChangeOutlineState);
         }
 
-        private void ChangeOutlineState(int mode) {
+        private void ChangeOutlineState(GameState state) {
             _outline.enabled = !_outline.enabled;
             _isActive = !_isActive;
         }
