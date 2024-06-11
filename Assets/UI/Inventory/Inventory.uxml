@@ -1,6 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Inventory/Inventory.uss?fileID=7433441132597879392&amp;guid=d488fe5a92dab74408c1b6bd11818ae1&amp;type=3#Inventory" />
-    <ui:VisualElement style="flex-grow: 1; background-color: rgba(75, 70, 70, 0.81);">
-        <ui:ListView name="inventoryView" style="height: 500px;" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(75, 70, 70, 0.81); flex-direction: row; align-items: center; flex-basis: 0; flex-wrap: nowrap; justify-content: center;">
+        <ui:ListView name="inventoryView" style="height: 80%; width: 40%; max-width: 40%; max-height: 80%; margin-right: 10%;" />
+        <ui:VisualElement name="ItemInspectionView" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Textures/ItemInspectionTexture.renderTexture?fileID=8400000&amp;guid=b7aca578519c3b4449f8d4745be38c06&amp;type=2#ItemInspectionTexture&quot;); height: 512px; width: 512px; max-width: 512px; max-height: 512px;" />
     </ui:VisualElement>
 </ui:UXML>

@@ -1,17 +1,21 @@
 using System.Collections.Generic;
 using System.Linq;
+using Inventory;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class InventoryUI : UIElement
-{   
+public class InventoryUI : UIElement {
+    [SerializeField]
+    private ItemInspectionController _itemInspectionController;
     public VisualTreeAsset itemsListTemplate;
     private ListView _itemsListView;
+    private VisualElement _itemInspectionView;
     private List<Item> _itemList;
     
     private void OnEnable() {
         _root.style.display = DisplayStyle.None;
         _itemsListView = _root.Q<ListView>("inventoryView");
+        _itemInspectionView = _root.Q<VisualElement>("ItemInspectionWindow");
         _itemList = new List<Item>();
     }
 
@@ -36,12 +40,14 @@ public class InventoryUI : UIElement
 
     public void ClearSelectionOnClose() {
         _itemsListView.ClearSelection();
+        _itemInspectionController.DestroyInspectionItem();
     }
     
     private void FocusItem(IEnumerable<object> obj) {
         if (obj.Any()) {
             var item = obj.First() as Item;
             Debug.Log($"{item.ItemName}"); 
+            _itemInspectionController.CreateInspectionItem(item.prefab);
         }
     }
 }
